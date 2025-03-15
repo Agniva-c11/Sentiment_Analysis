@@ -1,18 +1,19 @@
 Sentiment Analysis of Amazon Reviews Using VADER and RoBERTa
-Overview
+
+Overview:
 This project aims to analyze the sentiment of Amazon product reviews using two different sentiment analysis approaches:
 
 VADER (Valence Aware Dictionary and sEntiment Reasoner) – A lexicon-based sentiment analysis tool.
 RoBERTa (Robustly Optimized BERT Approach) – A transformer-based deep learning model fine-tuned for sentiment classification.
 By comparing the results of these two approaches, we gain insights into how different sentiment analysis techniques interpret textual data and how they correlate with actual user ratings (1-5 stars).
 
-Dataset
-The dataset used in this project consists of Amazon customer reviews, including:
+Dataset:
 
-Review Text – The actual review provided by the customer.
-Score (1-5 stars) – The rating assigned to the product by the reviewer.
-Other metadata (not used extensively but available for further analysis).
-To optimize processing time, only the first 500 reviews from the dataset are considered for analysis.
+The dataset used in this project consists of Amazon customer reviews, including:
+* Review Text – The actual review provided by the customer.
+* Score (1-5 stars) – The rating assigned to the product by the reviewer.
+* Other metadata (not used extensively but available for further analysis).
+* To optimize processing time, only the first 500 reviews from the dataset are considered for analysis.
 
 Project Structure
 1. Data Preprocessing & Visualization
@@ -48,28 +49,8 @@ VADER tends to align well with 1-star and 5-star ratings, as extreme sentiment i
 RoBERTa provides more nuanced predictions, especially for mixed reviews.
 Neutrality is more dominant in RoBERTa compared to VADER, suggesting that deep learning-based models can handle ambiguous sentiment better.
 The comparison of models allows us to choose an appropriate sentiment analysis method based on the complexity of the data.
-Requirements
-To run this project, install the necessary dependencies using:
 
-bash
-Copy
-Edit
-pip install pandas numpy matplotlib seaborn nltk transformers tqdm scipy
-You will also need to download the NLTK VADER Lexicon before running the script:
 
-python
-Copy
-Edit
-import nltk
-nltk.download('vader_lexicon')
-Usage
-To execute the script, simply run:
+Conclusion:
 
-bash
-Copy
-Edit
-python sentiment_analysis.py
-This will generate various visualizations and perform sentiment analysis on the dataset.
-
-Conclusion
 This project demonstrates the power of NLP (Natural Language Processing) in analyzing textual sentiment. By leveraging both traditional lexicon-based and deep learning-based approaches, we can extract meaningful insights from customer reviews. The comparison between VADER and RoBERTa showcases the advantages and limitations of each method, allowing us to make better choices for real-world applications.
